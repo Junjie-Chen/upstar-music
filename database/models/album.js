@@ -3,5 +3,6 @@ const Schema = mongoose.Schema;
 
 const albumSchema = new Schema({
   title: String,
-  date: Date
+  date: Date,
+  copiesSold: Number
 });
