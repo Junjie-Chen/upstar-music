@@ -4,5 +4,6 @@ const Schema = mongoose.Schema;
 const albumSchema = new Schema({
   title: String,
   date: Date,
-  copiesSold: Number
+  copiesSold: Number,
+  numberTracks: Number
 });
