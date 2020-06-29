@@ -9,6 +9,20 @@ const Artist = require('../models/artist');
  * @return {promise} A promise that resolves with the artists, count, offset, and limit
  */
 module.exports = (criteria, sortProperty, offset = 0, limit = 10) => {
+  const artists = Artist.find(buildQuery(criteria))
+    .sort({ [sortProperty]: 1 })
+    .skip(offset)
+    .limit(limit);
+
+  const count = Artist.find(buildQuery(criteria)).count();
+
+  return Promise.all([artists, count])
+    .then(([artistCollection, artistCount]) => ({
+      all: artistCollection,
+      count: artistCount,
+      offset,
+      limit
+    }));
 };
 
 const buildQuery = criteria => {
