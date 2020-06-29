@@ -9,3 +9,5 @@ const albumSchema = new Schema({
   image: String,
   revenue: Number
 });
+
+module.exports = albumSchema;
