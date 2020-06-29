@@ -9,5 +9,6 @@ const artistSchema = new Schema({
   genre: String,
   website: String,
   netWorth: Number,
-  labelName: String
+  labelName: String,
+  retired: Boolean
 });
