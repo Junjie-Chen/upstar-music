@@ -8,5 +8,6 @@ const artistSchema = new Schema({
   image: String,
   genre: String,
   website: String,
-  netWorth: Number
+  netWorth: Number,
+  labelName: String
 });
