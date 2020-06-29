@@ -6,5 +6,6 @@ const albumSchema = new Schema({
   date: Date,
   copiesSold: Number,
   numberTracks: Number,
-  image: String
+  image: String,
+  revenue: Number
 });
