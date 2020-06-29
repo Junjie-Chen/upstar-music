@@ -14,3 +14,5 @@ const artistSchema = new Schema({
   retired: Boolean,
   albums: [albumSchema]
 });
+
+const Artist = mongoose.model('Artist', artistSchema);
