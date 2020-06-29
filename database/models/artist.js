@@ -4,5 +4,6 @@ const Schema = mongoose.Schema;
 const artistSchema = new Schema({
   name: String,
   age: Number,
-  yearsActive: Number
+  yearsActive: Number,
+  image: String
 });
