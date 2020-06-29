@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const albumSchema = require('./album');
 
 const artistSchema = new Schema({
   name: String,
@@ -10,5 +11,6 @@ const artistSchema = new Schema({
   website: String,
   netWorth: Number,
   labelName: String,
-  retired: Boolean
+  retired: Boolean,
+  albums: [albumSchema]
 });
