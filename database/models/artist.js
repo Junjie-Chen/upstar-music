@@ -6,5 +6,6 @@ const artistSchema = new Schema({
   age: Number,
   yearsActive: Number,
   image: String,
-  genre: String
+  genre: String,
+  website: String
 });
